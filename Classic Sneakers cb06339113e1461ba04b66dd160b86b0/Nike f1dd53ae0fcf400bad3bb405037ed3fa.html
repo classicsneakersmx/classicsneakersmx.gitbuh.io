@@ -1,0 +1,672 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Nike</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f1dd53ae-0fcf-400b-ad3b-b405037ed3fa" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1608541737042-87a12275d313?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/fqwefr32qr.png"/></div><h1 class="page-title">Nike</h1></header><div class="page-body"><figure id="84a7c9f5-cf2f-44ee-a9c5-873a47aafc1a" class="link-to-page"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Collaborations%2084a7c9f5cf2f44eea9c5873a47aafc1a.html"><span class="icon">🤝</span>Collaborations</a></figure><figure id="c7f62796-54e2-4a56-8bd3-752cd4fb7082" class="link-to-page"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Best%20Sellers%20c7f6279654e24a568bd3752cd4fb7082.html"><span class="icon">🥇</span>Best Sellers </a></figure><div id="f2fe149a-6ee1-4b6d-b4b6-c299f00e9fe3" class="column-list"><div id="6168a438-3768-455b-9070-167d848cf51a" style="width:62.5%" class="column"><figure id="2ed4d92a-8fc7-4b7b-aed5-579cf88857d4" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.40.05.png"><img style="width:267px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.40.05.png"/></a></figure></div><div id="e4fe8af2-56b3-4359-9fff-3e2c3f08808e" style="width:37.5%" class="column"><h1 id="fb8fc20b-df08-422e-abec-afbd8f56d01c" class="">History and Classic Elements</h1></div></div><h1 id="4697f14d-5c88-4174-a9f4-61a005458373" class="">1964</h1><div id="2ac657e5-f38e-441e-b3e1-f5b279615847" class="column-list"><div id="632ae8bf-e5ce-42d5-8a19-90e9fddd650a" style="width:37.5%" class="column"><figure id="8340fba7-47e5-49f4-a664-e72d01c5f5fa" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.18.02.png"><img style="width:430px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.18.02.png"/></a></figure></div><div id="2d53f33e-5678-4b2e-892e-6dea1b8cbe8b" style="width:62.5%" class="column"><p id="cc10babd-834f-46c9-9ba2-76bc6cc6c8f7" class="">Nike, originally known as Blue Ribbon Sports (BRS) is founded by Phil Knight and Bill Bowerman, an Olympic running coach, in Oregon.</p></div></div><p id="20563729-0194-46f5-bec7-cc9ecdaf48c1" class="">
+</p><h1 id="7cfef65a-00a1-4888-9043-d4f54d06397d" class="">1970</h1><div id="24680c20-46ea-485c-90d8-830e85299465" class="column-list"><div id="79214ede-a0a9-4dd3-bef9-766f850c7a01" style="width:37.5%" class="column"><figure id="cd5da743-b340-4c0c-bb4e-2f4da9032d78" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.18.25.png"><img style="width:509px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.18.25.png"/></a></figure></div><div id="82b20531-736a-4394-afb4-2983fbd10d2b" style="width:62.5%" class="column"><p id="3efa3c80-a4be-4108-8557-f40f3056e8fd" class="">Experimenting by pouring rubber into his wife&#x27;s waffle iron, Bowerman creates the first waffle sole; an innovation that changes running shoes forever.</p></div></div><p id="1ef9a5a9-c929-4274-9188-e9f87f914f99" class="">
+</p><h1 id="e894b5c8-408e-4733-99da-13e7e435f811" class="">1972</h1><div id="cfcf474a-3db0-46e7-812e-0e87bd79b19b" class="column-list"><div id="372c8991-2c84-4c16-9305-ad18469a35c1" style="width:37.5%" class="column"><figure id="a9f40c5c-6f0b-4e25-aae1-09bf6cbb07f2" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.18.47.png"><img style="width:447px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.18.47.png"/></a></figure></div><div id="82e72ed9-dbfd-48ed-bd32-e6681c1f0188" style="width:62.5%" class="column"><p id="69f59fef-cc56-4574-8810-68a3528e4605" class="">The first version of what would become the Waffle Racer, nicknamed the &#x27;Moon Shoe&#x27; is released with the first Swoosh logo. Pairs are handed out to athletes competing in US Olympic trials.</p></div></div><p id="52af8237-3a7c-4ff8-a1d1-e2dd02747d6a" class="">
+</p><h1 id="d5c403a1-694a-46ea-bb2c-6fc1658d0c53" class="">1973</h1><div id="428ca8ba-08dc-492a-bc7d-495214ce6494" class="column-list"><div id="067e70e1-f92e-49e1-b7d2-d6fee1f919b9" style="width:37.5%" class="column"><figure id="5bbf4ac7-3391-4aeb-9a33-622c65c798f7" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.21.13.png"><img style="width:397px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.21.13.png"/></a></figure></div><div id="c5f8c74b-548b-4097-bb73-8176c950dbed" style="width:62.5%" class="column"><p id="770f0810-7101-48a8-a41e-4e9f61c6649b" class="">Nike launches the Blazer basketball shoe. The shoe is worn by NBA player George Gervin, known as “The Iceman” due to his talent for scoring ice cold dunks. The shoe puts the Nike brand into the consciousness of basketball fans for the first time.</p></div></div><p id="b5d73def-013f-46ee-bb74-dbb97cd1555f" class="">
+</p><h1 id="a8b8e867-faed-412e-aed8-ba7e706998b4" class="">1974</h1><div id="5b7d7ae8-863e-4255-80a6-75d4149397ce" class="column-list"><div id="08184dbd-2630-4009-81d5-0b4fc1437872" style="width:37.5%" class="column"><figure id="1a197624-33bd-468c-aff4-9b8bea42b419" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.21.39.png"><img style="width:501px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.21.39.png"/></a></figure></div><div id="db99da87-0e78-4f2d-a467-a80fd0ed0f8f" style="width:62.5%" class="column"><p id="a4c1e8ee-e8c8-4860-8fef-a80df1ee61cc" class="">The Nike Waffle racer is released, using a sole inspired by Bill Bowerman&#x27;s original waffle like creation. It is incredibly popular and becomes the best selling sneaker on the market.</p></div></div><p id="f6454e88-8147-4906-a7ed-a13c9db0e714" class="">
+</p><h1 id="fe702810-647a-448d-b02b-de2291630111" class="">1978</h1><div id="4b057cc7-95fb-45bf-a171-1523e73ae7ee" class="column-list"><div id="6e5608d1-5cdc-411d-b8d9-70385203da95" style="width:37.5%" class="column"><figure id="a905e69a-2b0e-49c2-9057-344d255a4fd9" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.22.02.png"><img style="width:509px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.22.02.png"/></a></figure></div><div id="616638ae-f054-4746-837b-58ef8d937bd3" style="width:62.5%" class="column"><p id="d233de4b-3849-4a54-a514-c67f539d912b" class="">Nike releases the the Tailwind, the first running shoe to include air pockets in its outsole, which changes sports shoe history forever.</p></div></div><p id="0d515135-8187-486f-a3ba-09a9f296902f" class="">
+</p><h1 id="970e9f1b-99c3-4430-98ba-b99d600d5e7c" class="">1982</h1><div id="8830dc2b-9826-4564-b657-dfa04ee103de" class="column-list"><div id="c681d2c5-9e3a-4835-90d6-5b88bfd20c22" style="width:37.5%" class="column"><figure id="d0f90f9c-c925-4259-82c3-0b906cbf72b2" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.22.26.png"><img style="width:489px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.22.26.png"/></a></figure></div><div id="5679fb58-d5c3-4e4b-a870-eac2a2ed4b6c" style="width:62.5%" class="column"><p id="5f05a5f5-4c9c-404e-8a44-6a61eeab40a8" class="">The Air Force 1 is released and is the first basketball show to use air in the sole. Since first being reissued in 1986, there have been thousands or versions of the Air Force 1 in high and low tops and a wide range of colours and materials.</p></div></div><p id="7361e956-1b21-4a2c-8520-14dd933fe0e7" class="">
+</p><h1 id="fdb5ce05-51a0-4a84-8ac4-e20f02f18136" class="">1984</h1><div id="c458888e-7975-4d11-80fa-6a61a0efdb96" class="column-list"><div id="4f7215f8-4e30-4830-9b98-a355548342c2" style="width:37.5%" class="column"><figure id="d88bdc2c-4ff0-44a1-80da-541756786c41" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.22.56.png"><img style="width:466px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.22.56.png"/></a></figure></div><div id="0017199d-9fe9-4705-b0ee-6e808e7e4f09" style="width:62.5%" class="column"><p id="1c7bca07-5ba6-48d9-bea0-043a9f02f01d" class="">The Air Jordan 1 is produced exclusively for Michael Jordan with the famous &#x27;Jumpman&#x27; logo used for the first time. The prototype for the shoe named the Air Ship was banned by the NBA for not including enough white. The iconic Jordan 1 is released to the general public a year later.</p></div></div><p id="531aa7b5-a7e0-492c-982a-29e950d13452" class="">
+</p><h1 id="ebdd40b3-a1cd-4630-9fdf-f427a68141d3" class="">1987</h1><div id="fc5a1b28-4a53-4353-a336-4e69e1c162ef" class="column-list"><div id="38d8434e-b326-4ffa-963a-28a339ae8d60" style="width:37.5%" class="column"><figure id="175c0bc8-7009-41a7-8408-4c3e02f477a8" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.23.24.png"><img style="width:485px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.23.24.png"/></a></figure></div><div id="59ad4cc2-13e8-4319-8234-3cb830990de5" style="width:62.5%" class="column"><p id="d54ed19c-c79f-4d24-8e49-b915ac1615e8" class="">The first Nike Air Max shoe is released with a visible air pocket. The TV advert for the Air Max 1 was the first in history to use a Beatles track, “Revolution”.</p></div></div><p id="c9068220-2ae9-44ae-a88c-f33a1c72747a" class="">
+</p><h1 id="556f4f32-6af1-4ad1-882b-1b929e6aaab1" class="">1990</h1><div id="cab408c3-b91b-4b8f-aae7-e8e1604e96f5" class="column-list"><div id="6d469957-f9fd-4f7b-9eda-a419c636c309" style="width:37.5%" class="column"><figure id="463b4f75-79ee-4d10-a9f6-60b2bc4d4576" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.24.13.png"><img style="width:395px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.24.13.png"/></a></figure></div><div id="39e019f8-06ac-49c6-a791-1d4e964c3b58" style="width:62.5%" class="column"><p id="5628d448-7a65-4aab-86a5-9cbe48bf2595" class="">Nike releases the Air Max 90. Designed by one of Nike&#x27;s most famous designers, Tinker Hatfield, the shoe was originally called the Air Max 3 until its re-release in 2000.</p></div></div><p id="2d2bcde2-66f5-40e9-892b-d47ad388f8cb" class="">
+</p><h1 id="e727c86f-f629-4639-bbd3-73689381681a" class="">1995</h1><div id="7150a426-38ae-477d-9734-08443be78c17" class="column-list"><div id="41d76e2e-5d14-4c1b-afe3-fcc6d6b769fa" style="width:37.5%" class="column"><figure id="bf664280-3bfd-4bcd-b332-e99f891e87ec" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.25.04.png"><img style="width:494px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.25.04.png"/></a></figure></div><div id="c443ecb6-d27d-45fd-92b4-0497761b9bf5" style="width:62.5%" class="column"><p id="a0514ec4-ea03-4ad1-b600-b41a21ba054c" class="">The Air Max 95 is released with a design considered revolutionary at the time. The original gradient grey colourway featured contrasting neon yellow in the multiple air units and lace loops with a ripple design by Nike ACG designer Sergio Lozano.</p></div></div><p id="dffbba6c-b266-4ec8-bfe0-201fa918993d" class="">
+</p><h1 id="77eaf45c-4380-4c98-bca0-34a7b955ea42" class="">1997</h1><div id="ef876b75-3e3a-48e9-b3ce-284d99a588df" class="column-list"><div id="d9681fd6-40af-4dce-a0d3-2bd137b3a49a" style="width:37.5%" class="column"><figure id="52f429db-49ae-46dc-b925-86239fffeddd" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.25.49.png"><img style="width:483px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.25.49.png"/></a></figure></div><div id="3d680378-1015-4919-9460-1ebb53d74b17" style="width:62.5%" class="column"><p id="aa4568aa-59fb-42b2-881e-27474afb9ee0" class="">The iconic Air Max 97 is released in original &#x27;Silver Bullet&#x27; colourway, featuring a full length visible air sole.</p></div></div><p id="6b82d1be-b2b8-4a23-b364-e4c745869dcc" class="">
+</p><h1 id="a211ff0c-86e5-4e8a-832d-355970e5f53c" class="">2003</h1><div id="28d4d102-7b57-4292-807c-68c5f8cea9df" class="column-list"><div id="3effabe8-17a1-455a-bdae-5a23d29d0ec0" style="width:37.5%" class="column"><figure id="f8089709-944b-42e6-9d98-ce3286724560" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.26.29.png"><img style="width:459px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.26.29.png"/></a></figure></div><div id="e1739362-7a6c-4344-bb9d-82dfdf15ea7d" style="width:62.5%" class="column"><p id="955a8bb3-ca94-4741-b074-140b51330f8d" class="">Nike buys Converse for $309 million. Nike would later use some of its own technologies to create updated versions of the famous Converse All Star range of sneakers.</p></div></div><p id="d10bcdfd-d88b-4eae-8067-ecc4d5aaaf44" class="">
+</p><h1 id="11cc9ecc-3bad-4e30-a169-853bf5b02211" class="">2015</h1><div id="90baa822-2bab-4453-839b-b1ec97e84651" class="column-list"><div id="d3941a3a-a3b9-4689-9113-1f9bab919781" style="width:37.5%" class="column"><figure id="40703865-e12c-4ea7-9f2a-f164d30fafbd" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.26.52.png"><img style="width:499px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.26.52.png"/></a></figure></div><div id="adc22cce-3757-41b0-ad80-94a143139809" style="width:62.5%" class="column"><p id="33b8658a-3d90-46d1-b655-738111ee2c9c" class="">Nike announces a limited number of reproductions of the self lacing Nike Mag shoe, first seen in the movie Back To The Future Part II in 1989, auctioned in collaboration with the Michael J. Fox Foundation.</p></div></div><p id="9217d0a9-fd00-48bf-aa20-d86232d113ed" class="">
+</p><h1 id="8c315881-4f21-45d1-ae59-75a15e632211" class="">2017</h1><div id="5542bdbc-54e7-4d85-8415-705a31b006eb" class="column-list"><div id="80d36442-6b07-4527-894b-f9a0b1b3bded" style="width:37.5%" class="column"><figure id="1eaac9f6-6012-443d-9b8e-ad51ad74d225" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.27.37.png"><img style="width:464px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-05_a_la(s)_15.27.37.png"/></a></figure></div><div id="b289e412-e006-4ee5-8bb9-1708cbb94581" style="width:62.5%" class="column"><p id="c0ee350a-0ff2-460d-a946-5931383dad17" class="">Nike reveals the Hyperadapt 1, the first self tightening shoe that uses sensors and an adaptive lacing system to ensure a perfect fit as the wearer carries out activities.</p></div></div><hr id="b8621b39-f918-4180-ae35-ea3a1a59363e"/><p id="2a80473c-4969-43d3-9b34-043c7a361d2c" class="">
+</p><div id="37207392-c7e0-48f6-89d7-185b6b800afb" class="column-list"><div id="342b9744-a559-4962-9f11-1caf06b8543e" style="width:6.25%" class="column"><figure id="4e230ee8-c418-416d-b519-fe788d4cc524" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-09_a_la(s)_12.16.46.png"><img style="width:209px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-09_a_la(s)_12.16.46.png"/></a></figure></div><div id="a2d011b6-19cb-46e4-ab65-9dfc0616d29a" style="width:93.75%" class="column"><figure id="cad07539-ae45-4af6-ad2f-c6522b499603"><a href="https://www.instagram.com/nike/?hl=es" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.instagram.com/nike/?hl=es</div></div></a></figure></div></div><div id="9f61707c-3c54-49e4-bdb1-481a810c2a6d" class="column-list"><div id="2b0646c9-9d7f-4a07-88a9-ef8ec3b0ee26" style="width:6.25%" class="column"><figure id="292bcb69-3979-4d93-83ec-4807e4b0cdf6" class="image"><a href="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-09_a_la(s)_12.17.54.png"><img style="width:372px" src="Nike%20f1dd53ae0fcf400bad3bb405037ed3fa/Captura_de_Pantalla_2021-12-09_a_la(s)_12.17.54.png"/></a></figure></div><div id="0d91d604-f63f-44ff-98ba-55ad8cfa0ef7" style="width:93.75%" class="column"><figure id="f1b258aa-ed9d-40f4-9c94-a730c326ce1c"><a href="https://www.nike.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Nike. Just Do It</div><div class="bookmark-description">Nike delivers innovative products, experiences and services to inspire athletes.</div></div><div class="bookmark-href"><img src="https://www.nike.com/android-icon-128x128.png" class="icon bookmark-icon"/>https://www.nike.com/</div></div><img src="https://c.static-nike.com/a/images/w_1920,c_limit/bzl2wmsfh7kgdkufrrjq/image.jpg" class="bookmark-image"/></a></figure></div></div><p id="1c2a25f1-6f8c-4108-ae2d-1c9f4e928aeb" class="">
+</p></div></article></body></html>

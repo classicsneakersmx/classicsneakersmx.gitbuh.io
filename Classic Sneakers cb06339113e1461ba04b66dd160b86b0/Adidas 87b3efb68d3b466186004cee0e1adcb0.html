@@ -1,0 +1,657 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Adidas</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="87b3efb6-8d3b-4661-8600-4cee0e1adcb0" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1608551279839-84c7ca889b80?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Adidas%2087b3efb68d3b466186004cee0e1adcb0/adidas-logo-750x410.png"/></div><h1 class="page-title">Adidas</h1></header><div class="page-body"><figure id="59554d3b-7477-437a-bbe6-3b4bc74594cd" class="link-to-page"><a href="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Collaborations%2059554d3b7477437abbe63b4bc74594cd.html"><span class="icon">🤝</span>Collaborations</a></figure><figure id="747309f5-88d7-49d0-bc29-da90bc6542d3" class="link-to-page"><a href="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Best%20Sellers%20747309f588d749d0bc29da90bc6542d3.html"><span class="icon">🥇</span>Best Sellers</a></figure><div id="c01cf967-7046-4cab-8976-56ca0ecb19bb" class="column-list"><div id="e05b25c3-713f-4492-87df-d7c06b5abb32" style="width:43.75%" class="column"><figure id="e1c22f4b-427f-4fd7-af4c-747970b22dcc" class="image"><a href="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Captura_de_Pantalla_2021-12-05_a_la(s)_14.46.57.png"><img style="width:336px" src="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Captura_de_Pantalla_2021-12-05_a_la(s)_14.46.57.png"/></a></figure></div><div id="8246bd3c-ade7-4ffb-8966-e708ffac8ed4" style="width:56.25%" class="column"><h1 id="e145dc80-3cad-43e3-9e18-e289ce6a7b59" class="">History and Classic Elements</h1><h1 id="922d4bd5-cda3-4d6a-9fb9-b17b0864a281" class="">1949</h1><p id="fdb380d4-013f-4888-836c-b34d29f74368" class="">ADIDAS formed by Adolf Dassler after feud with brother Rudolf who then went on to form Puma.</p></div></div><h1 id="694c2434-e64a-480d-b0a9-8ca3c97d1557" class="">1950</h1><div id="4ea65a95-a32b-4b8e-96a8-aaa44cc22bc0" class="column-list"><div id="1234e917-a5a5-4270-a3d0-8c524d9e0a55" style="width:37.5%" class="column"><figure id="910e692e-2e12-4421-a082-b4eef717a4b2" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/shoes.jpg"><img style="width:240px" src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/shoes.jpg"/></a></figure></div><div id="53c72d1a-c37a-4098-80a3-5c575e92699c" style="width:62.5%" class="column"><p id="69bc9c3a-1ca9-4fb0-9002-49e683e0386f" class="">Samba is released as a football training shoe in response to the cold weather. It&#x27;s since grown out of it&#x27;s original purpose and is now considered a modern classic, particularly in the UK.</p></div></div><h1 id="fa63163b-a951-4d71-a709-1f4d72ec4054" class="">1965</h1><div id="7a600e7a-5e4f-437b-aa06-75a8d9542e5f" class="column-list"><div id="ed747754-9b53-417f-9007-e916e8d60f72" style="width:37.5%" class="column"><figure id="4416b249-bfc0-4cc0-baf2-7edb42e9b4d4" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/3_1.jpg"><img style="width:240px" src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/3_1.jpg"/></a></figure></div><div id="4f3dacb0-76f3-44bb-89c7-ce9e95cd45f8" style="width:62.5%" class="column"><p id="1e538d15-f8fa-4f18-a8f9-3d2b3bc2f23b" class="">Haillet shoe is released and is later renamed adidas Stan Smith after historic tennis player. Such a good move from adidas that even Stan Smith&#x27;s competitors beat him wearing his own shoes!</p></div></div><p id="7ced47fe-0b10-40a6-9086-661a69d1dbb5" class="">
+</p><h1 id="0fcda418-9094-41eb-b279-e896e8c40dc9" class="">1968</h1><div id="995ace68-c154-4dc5-9737-2f6da63fe40e" class="column-list"><div id="2dabac59-aecf-45dd-92da-848fc99d20d6" style="width:37.5%" class="column"><figure id="09d14d35-50ed-4860-889e-e2ac142cf1dc" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/4.jpg"><img style="width:240px" src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/4.jpg"/></a></figure></div><div id="2032f2b2-920a-4f2d-b98c-5c33c12cd076" style="width:62.5%" class="column"><p id="1251fbfd-e887-4741-be30-3d266670a0e3" class="">Dick Fosbury wears odd coloured adidas high jump shoes to the Olympic Games and wins Gold performing the &#x27;Fosbury Flop&#x27;. The first Gazelle was also released this year.</p></div></div><h1 id="d8067736-909b-40f2-8ec5-b977e6354aa9" class="">1969</h1><div id="006f7a1b-b8a0-465e-aeaa-250669669e10" class="column-list"><div id="ebdeac7b-ce54-487e-b391-e19094d19ee2" style="width:37.5%" class="column"><figure id="e5381b5b-439c-493a-9ca3-db36264edae6" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/5.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/5.jpg"/></a></figure></div><div id="04428389-e381-47cb-8642-1e772ed874ae" style="width:62.5%" class="column"><p id="906ddb97-4ab9-4bfb-9941-72eafa0a8bb9" class="">Adidas Superstar released and endorsed free of charge by Run-DMC allegedly in impersonation of &#x27;prison style&#x27; worn by inmates. After not being taken so seriously by adidas, Run DMC released the song &#x27;My adidas&#x27; to prove to the brand just how successful their endorsement was and were offered a deal shortly after. This was considered the start of the Hip Hop sneaker culture we know of today.</p></div></div><h1 id="4cc11260-de0d-426e-b10b-887bc0820438" class="">1971</h1><div id="b77e3f85-cf47-4043-a8f5-8e342a183997" class="column-list"><div id="25dea004-b3e1-4c4f-b802-29e4a70f70d0" style="width:37.5%" class="column"><figure id="db84c623-dcd6-42f7-a329-cfb3fbe054e6" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/1971.jpg"><img style="width:288px" src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/1971.jpg"/></a></figure></div><div id="e5ac1982-0208-4340-a0d1-30ad8cf7bc1c" style="width:62.5%" class="column"><p id="b7dd8f1c-8756-4013-ad85-34520ad4207d" class="">Tournament suede basketball shoe released</p></div></div><h1 id="4031d9ae-564e-4b03-825d-b3d139fe78dc" class="">1975</h1><div id="5b11233b-915e-4947-86a7-d0d4a8470edb" class="column-list"><div id="c3bf7383-33d5-4376-b4f4-00606b3d0791" style="width:37.5%" class="column"><figure id="fa77f1cf-5823-407d-a280-4801921c92bd" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/nizza.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/nizza.jpg"/></a></figure></div><div id="1f8a6eaa-2a73-4094-a70e-e03b0d726039" style="width:62.5%" class="column"><p id="8ceb6230-4431-484f-a40e-aa86dc98ee51" class="">Nizza first introduced – adidas&#x27; answer to the Converse All Star Nizza was developed as a well priced shoe for sport and leisure activities before being strongly associated with basketball. In recent times, the Nizza has become a popular choice of footwear amongst many sub-cultures.</p></div></div><h1 id="250e1160-0e7a-480a-9c15-064c46a0b39e" class="">1978</h1><div id="6dd07970-e6c3-4d95-96d5-b533473f2b2f" class="column-list"><div id="c95ff0b1-d799-4958-a963-97a439a23a94" style="width:37.5%" class="column"><figure id="690b64cd-4f84-4a45-897b-32557c4f8504" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/tobacco.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/tobacco.jpg"/></a></figure></div><div id="b2adbae7-bd72-4a73-a3f3-e719d65d7a15" style="width:62.5%" class="column"><p id="580397d9-df8d-40fe-af75-498bb75a5547" class="">Tobacco released – now categorised as part of the adidas Originals range.</p></div></div><h1 id="8131b1c8-66dd-48e9-97ac-955f9d73e712" class="">1979</h1><div id="a6407cff-8df0-4b2b-b6c7-428637dd8cb0" class="column-list"><div id="606e5b38-9851-41d8-87c4-6d103ca2b1ff" style="width:37.5%" class="column"><figure id="86b2b7e4-bbd7-4d43-9b32-0500df5da505" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/foresthills.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/foresthills.jpg"/></a></figure></div><div id="5a6768cc-6cc1-4cd3-80a8-d7249a30df92" style="width:62.5%" class="column"><p id="98a3bdc7-6350-441f-b500-4d24404b7d20" class="">Forest Hills was originally released as a tennis shoe but has since gained legendary status amongst UK football fans.</p></div></div><h1 id="30fecb50-1958-4f56-9b68-f2a85a3df1c3" class="">1980</h1><div id="292038d5-4ed8-4af3-8322-8e58fd911136" class="column-list"><div id="cd4b0334-f0e1-4b97-99fb-f17f21b02cd7" style="width:37.5%" class="column"><figure id="9b7bfec6-d877-4f16-a4fd-9f3e56a52114" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/campus.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/campus.jpg"/></a></figure></div><div id="e6b22baf-57c6-4eab-8d9c-66ba9ff4abaf" style="width:62.5%" class="column"><p id="9221f5de-3be4-4238-8132-d121f140ba23" class="">Campus released and later championed by the Beastie Boys!</p></div></div><h1 id="e5982196-7430-4a5b-b474-c8e3f220a366" class="">1982</h1><div id="df588f3e-e5a2-4faf-9ce6-152219291a5d" class="column-list"><div id="e08ff69f-e709-4c81-b70b-4041505e47d0" style="width:37.5%" class="column"><figure id="b1b4538f-8dd5-41d0-9ade-f330c4b83527" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/copa.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/copa.jpg"/></a></figure></div><div id="8cade5df-63db-4160-91eb-9c30a606bd85" style="width:62.5%" class="column"><p id="683bd1d6-e81a-498a-a5b7-8d53698d81de" class="">Copa Mundial football boot heavily endorsed during 1982 World Cup – to this day there have been over 10million pairs sold.</p></div></div><h1 id="a2ddf6f5-8d90-4762-8d90-d7bcc67e8b88" class="">1984</h1><div id="8be5b4df-ade7-433c-af37-2bb6604a96c9" class="column-list"><div id="fba11db5-9731-4e71-84d5-fdf06bf1cc11" style="width:37.5%" class="column"><figure id="ffbab459-f7c1-4c55-a405-213d792395ed" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/1984.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/1984.jpg"/></a></figure></div><div id="b91b75bd-becf-463e-b6a5-5ee9595fe5de" style="width:62.5%" class="column"><p id="8f0ba066-bcba-43fc-9591-6c0c31668c35" class="">Adicolor Hi released with a pack of felt tip pens for people to create their own customs.</p></div></div><h1 id="03fff486-9388-4d42-828e-30f8ef7e9507" class="">1984</h1><div id="c091dbe5-a706-4af8-a62c-de526efac559" class="column-list"><div id="805919b7-33ff-49fc-9fc1-c4ee4c4973ce" style="width:37.5%" class="column"><figure id="8b9f6dfa-dbd0-4fa5-a91b-c8fa92bd03cf" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/latrainer.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/latrainer.jpg"/></a></figure></div><div id="96a91aa9-4066-42ec-8097-45c4f22e9b00" style="width:62.5%" class="column"><p id="341f6e28-bbaf-43cc-a6bc-b56e5113b2d9" class="">Adidas LA Trainer released to coincide with Olympic Games in Los Angeles. This was the first trainer to use the patented peg cushioning system.</p></div></div><h1 id="8acfb902-fb89-49be-b09c-6f3765b80962" class="">1992</h1><div id="8c73eb69-d739-4f3c-b928-3bf736c7d382" class="column-list"><div id="3ce34d81-651b-46ee-938d-8466847ddc98" style="width:37.5%" class="column"><figure id="b0ee31a4-64b1-4788-bd72-8d55187003e4" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/mutombo.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/mutombo.jpg"/></a></figure></div><div id="96f6dac3-8f17-43b2-8dc6-f48e20955421" style="width:62.5%" class="column"><p id="c5033340-fa2c-4ac4-b37f-1c0143622e96" class="">The Mutombo was released in homage to University graduate basketball player Dikembe Mutombo, much to the surprise of the public ad he was virtually unknown.</p></div></div><h1 id="58070a78-d50f-40bd-81c5-da8174e07217" class="">1992</h1><div id="f3ca8166-3dd8-4384-b8f3-3a3a395798bc" class="column-list"><div id="8631621b-9d2d-4df0-a887-075ecf672f81" style="width:37.5%" class="column"><figure id="d31ae558-c56d-4b29-99f7-8f0c6147e6ee" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/predator.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/predator.jpg"/></a></figure></div><div id="29d733b6-2ab3-4ced-8231-514243c32168" style="width:62.5%" class="column"><p id="b0101c5d-e713-423a-be47-757c03b76173" class="">Adidas Predator invented by former Middlesbrough &amp; Liverpool player Craig Johnston. He approached adidas, Nike, Reebok &amp; Puma with his invention who all shunned the boot to begin with before adidas finally offered him a deal after he interrupted a board meeting to pitch them with a video.</p></div></div><h1 id="3f1ccdb8-c2e2-4320-be8b-485d098ea5bf" class="">1996</h1><div id="e10826e1-1854-4d2b-b7cf-7007d209f962" class="column-list"><div id="619db5f8-8e3b-4487-afb5-75df8ca2698f" style="width:37.5%" class="column"><figure id="a20abfd6-a5a2-4f42-af87-d0a48a13617a" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/davemirra.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/davemirra.jpg"/></a></figure></div><div id="13dc1d29-fb10-487e-8ed6-b865ddd2ce67" style="width:62.5%" class="column"><p id="d5f32bf1-3186-44e0-a82f-0bf4cdd76e92" class="">Dave Mirra BMX inspired shoes</p></div></div><h1 id="d1aa5194-b3e4-4063-b5d9-6d30e25d3956" class="">2000</h1><div id="d4f04c29-a72e-4af1-92ca-b54954265889" class="column-list"><div id="c9068fc2-0124-4624-a546-d25a400ef6d3" style="width:37.5%" class="column"><figure id="6a2f2288-ce94-4bc8-9fea-d06aea6edf54" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/kobe.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/kobe.jpg"/></a></figure></div><div id="2c3d4f3b-d8d0-42ec-8e9c-7800d4821cce" style="width:62.5%" class="column"><p id="f1c23bde-8ead-452c-849a-35ce3469953d" class="">The &#x27;Kobe&#x27; released as his third signature model. Remembered as the original space boots, the &#x27;Kobe&#x27; was renamed the &#x27;Crazy 1&#x27; since being considered a retro sneaker.</p></div></div><h1 id="6ef6d104-8345-4cbd-b422-1afe5e539de6" class="">2002</h1><div id="a74e37f7-1520-479e-8d6c-3f283aeb85a3" class="column-list"><div id="4a6e7421-bfd3-41da-bc98-abd53ced800d" style="width:37.5%" class="column"><figure id="685deff2-a11f-4b56-ba52-16b8507ee053" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/climacool.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/climacool.jpg"/></a></figure></div><div id="4e9a976c-7a37-459a-b6fe-a553e150fa06" style="width:62.5%" class="column"><p id="4f37cf4d-2856-4e33-9266-e5b19aa3965e" class="">Climacool – the ultimate breathable running shoe</p></div></div><h1 id="83987a1a-57dd-48f8-86a3-b444468af0ea" class="">2011</h1><div id="95af5435-900b-4a3a-b428-fc186c05c961" class="column-list"><div id="2c5880f2-8022-4658-aac1-551eafc3a53c" style="width:37.5%" class="column"><figure id="cde4e04a-b395-41e6-8659-b2ff8653ca1e" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/busenitz.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/busenitz.jpg"/></a></figure></div><div id="3bde86e9-d8ca-41bd-914d-d54c1b084917" style="width:62.5%" class="column"><p id="0c15f960-3fe7-4b1b-82f1-b6a8a3fe107e" class="">Busenitz introduced to revamp their current skate line</p></div></div><h1 id="61ec9fa3-49a0-4f3e-bcb4-1d6ec79250f8" class="">2012</h1><div id="ef850f10-57ae-487e-a079-c80b521b148d" class="column-list"><div id="c6cc4786-23f0-41b8-bc44-38c899614f46" style="width:37.5%" class="column"><figure id="1c8ab9fe-79a0-41f5-a28a-d782c79110e5" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/primeknit.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/primeknit.jpg"/></a></figure></div><div id="08f286fe-43ea-4b25-a11c-945867db888e" style="width:62.5%" class="column"><p id="64f6b4f4-0c9e-459d-8126-33fae2aff351" class="">AdiZero Primeknit</p></div></div><h1 id="f82d8a39-072c-40bf-aba0-6cded958ab78" class="">2013</h1><div id="2907f319-0185-4b9f-bf05-7b3f039e5e48" class="column-list"><div id="9971e5c9-5178-4a8a-a68e-c7b8cf4a884b" style="width:37.5%" class="column"><figure id="87088f3b-78c6-4bdd-a534-d259c589198c" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/energybiost.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/energybiost.jpg"/></a></figure></div><div id="c056ebc5-3524-4487-85f6-bc4ae33479c7" style="width:62.5%" class="column"><p id="8d051785-3925-4435-aacd-ddecdbcc9f42" class="">Energy Boost™ released with TORSION technology for mid-foot arch support.</p></div></div><h1 id="6957295b-77a4-49b1-a3b7-85a78e64dbb5" class="">2015</h1><div id="bdd9f1b7-2104-45e3-be96-e598a61f06ef" class="column-list"><div id="d3f18358-2f60-4898-b096-53d82aaf6070" style="width:37.5%" class="column"><figure id="c270b5b2-9c28-4ef7-8812-29c0a7c52756" class="image"><a href="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/yeezy.jpg"><img src="https://d88af436618eb577b5e2-f01cec007b719b5f79502bffd63464ad.ssl.cf3.rackcdn.com/fatbuddhastore/18aug2017/yeezy.jpg"/></a></figure></div><div id="909db8ef-f40d-4439-b0e4-ca14d27408c6" style="width:62.5%" class="column"><p id="80db10fa-0178-487b-9c54-33a6c8d30777" class="">Adidas infamous collaboration with Kanye West revealed and the Yeezy Boost 750 sold out within 10 minutes of its release.</p></div></div><hr id="51ac065d-1f05-4c9d-8929-74387e430eca"/><div id="341cb2fd-db72-4406-affe-b9e637428f6d" class="column-list"><div id="904628b4-d4f8-400d-a8dc-0e0e5717fcaa" style="width:6.25%" class="column"><figure id="e99dae10-82a4-40d2-9f6d-5085e3bfc8e0" class="image"><a href="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Captura_de_Pantalla_2021-12-09_a_la(s)_12.10.49.png"><img style="width:363px" src="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Captura_de_Pantalla_2021-12-09_a_la(s)_12.10.49.png"/></a></figure></div><div id="0ebbb9b6-c046-4298-8e0b-ccddbbe5c96f" style="width:93.75%" class="column"><figure id="0be3e521-b0ac-4125-ae73-78bdeb82f3e0"><a href="https://www.instagram.com/adidas/?hl=es-la" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.instagram.com/adidas/?hl=es-la</div></div></a></figure></div></div><div id="de8fe5a2-7676-4fa4-ad11-8e49ec2bbd26" class="column-list"><div id="9b9d86da-0f7b-4ca0-94ec-eacefd4dee74" style="width:6.25%" class="column"><figure id="2a61bb74-a25e-4b20-ab04-ed3eb1716e8c" class="image"><a href="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Adidas-logo.jpeg"><img style="width:1280px" src="Adidas%2087b3efb68d3b466186004cee0e1adcb0/Adidas-logo.jpeg"/></a></figure></div><div id="72d34d11-6a4a-497f-bcbf-f72449f81ec9" style="width:93.75%" class="column"><figure id="80518a1a-7135-4116-b211-b75f9940c725"><a href="https://www.adidas.com/us" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">adidas® Official Website US | Sporting Goods</div><div class="bookmark-description">adidas designs for athletes of all kinds. Creators who love to change the game. People who challenge conventions, break the rules, and define new ones. Then break them all over again. We design sports apparel that gets you moving, winning, and living life to the fullest.</div></div><div class="bookmark-href"><img src="https://www.adidas.com/glass/react/79f71d6/assets/img/adidas-favicon.ico" class="icon bookmark-icon"/>https://www.adidas.com/us</div></div><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enUS/Images/Running_fw21_UB22_MH_Launch-d_tcm221-821499.jpg" class="bookmark-image"/></a></figure></div></div></div></article></body></html>
